@@ -10,6 +10,7 @@
   --secondary-border-color: #ececec;
   --portfolio-projects-border: #eeeeee;
   --social-icon-color: #afb1b8;
+  --transparent-grey-color: #2f303acc;
 }
 h1,
 h2,
@@ -593,4 +594,27 @@ a {
 
 .regular-customers-link:hover {
   border: 1px solid var(--accent-blue);
+}
+.what-we-do-images {
+  display: flex;
+}
+.what-we-do-images > li {
+  margin-right: 30px;
+  position: relative;
+}
+.desktop-apps-container {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  background-color: var(--transparent-grey-color);
+  bottom: 0;
+}
+.desktop-apps-container > p {
+  color: var(--primary-light-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding-top: 27px;
 }
