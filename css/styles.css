@@ -650,5 +650,8 @@ a {
 }
 .transition-card {
   position: relative;
-  overflow: show;
+  overflow: hidden;
+}
+.portfolio-projects > li:hover .overlay {
+  transform: translateY(0);
 }
