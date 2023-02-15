@@ -12,8 +12,7 @@
   --social-icon-color: #afb1b8;
   --transparent-grey-color: #2f303acc;
   --transparent-blue: #2196f3;
-  /* --transform: translateY(100%);
-  --transition: transform var(--time) var(--time-function); */
+  --modal-bg: rgba(0, 0, 0, 0.2);
   --time: 250ms;
   --time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -138,6 +137,8 @@ h1 {
   border: 0px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   padding: 10px 20px;
+  transition: box-shadow var(--time) var(--time-function),
+    background-color var(--time) var(--time-function);
 }
 
 .btn-service:hover,
@@ -188,6 +189,18 @@ h1 {
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
+}
+.navbar-studio:after {
+  position: relative;
+  transition: color var(--time) var(--time-function);
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--active-and-hover-color);
+  position: absolute;
+  border-radius: 2px;
+  left: 0;
+  bottom: 0;
 }
 
 .logo {
@@ -617,7 +630,7 @@ a {
   position: absolute;
   width: 100%;
   height: 70px;
-  background-color: var(--transparent-grey-color);
+
   bottom: 0;
 }
 .desktop-apps-container > p {
@@ -627,7 +640,8 @@ a {
   line-height: 1.14;
   text-align: center;
   letter-spacing: 0.03em;
-  padding-top: 27px;
+  padding: 27px 0px;
+  background-color: teal;
 }
 .overlay {
   background-color: var(--transparent-blue);
@@ -654,4 +668,28 @@ a {
 }
 .portfolio-projects > li:hover .overlay {
   transform: translateY(0);
+}
+.backdrop {
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-bg);
+  top: 0;
+  left: 0;
+  position: fixed;
+  opacity: 1;
+  visibility: visible;
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-window {
+  background-color: var(--primary-light-color);
+  width: 528px;
+  height: 581px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

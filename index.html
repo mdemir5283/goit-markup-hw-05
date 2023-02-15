@@ -20,6 +20,11 @@
         <ul>
           <li>
            <a class="navbar-navlink navbar-studio active" href="index.html">Studio</a>
+           <svg width="48" height="14" class="studio-icon">
+            <use href="./images/lastimages.svg#icon-hover-1"></use>
+          
+
+           </svg>
           </li>
           <li>
             <a class="navbar-navlink" href="portfolio.html">Portfolio</a>
@@ -51,7 +56,7 @@
       <section class="hero-section">
         <div class="container">
         <h1>EFFECTIVE SOLUTIONS FOR <br> YOUR BUSINESS</h1>
-        <button type="button" class="btn-service">Request our service</button>
+        <button type="button" data-modal-open class="btn-service">Request our service</button>
       </div>
       </section>
 
@@ -399,11 +404,20 @@
         </div>
       </div>
     </footer>
-    <div class="link-for-back" data-model>
+
+    <div class="backdrop is-hidden" data-modal="">
       <div class="modal-window">
-        <button type="button" data-model-close class="close-bttn"> </button>
+        <button type="button" data-modal-close="" class="close-bttn">
+          <svg width="18" height="18" class="closing-icon">
+            <use href="./images/lastimages.svg#icon-close-btn"></use>
+            </svg>
+         
+        </button>
       </div>
     </div>
+
+
+    
     <script src="./js/modal.js"></script>
   </body>
 </html>
